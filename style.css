@@ -4,7 +4,11 @@
   --background-color: #fbfbfb;
   --background-colorS: #ffffff;
   --text-color: #101010;
+  --secondary-color: #dbd9dd;
   --font-family: "Arial", sans-serif;
+}
+* {
+  box-sizing: border-box;
 }
 body {
   margin: 0;
@@ -13,10 +17,10 @@ body {
   background-color: var(--background-color);
   color: var(--text-color);
 }
-.container{
-    background-color: var(--background-colorS);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 25px;
+.container {
+  background-color: var(--background-colorS);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 25px;
 }
 .nav_list {
   list-style: none;
@@ -28,8 +32,6 @@ body {
   color: var(--text-color);
   font-weight: bold;
   height: 8vh;
-
-
 }
 .nav_list li:last-child {
   flex-grow: 0.5;
@@ -43,64 +45,150 @@ body {
 main {
   padding: 20px;
   background-color: var(--background-color);
-
-
 }
 .hero {
   text-align: center;
-  margin: 20px;
+  margin:70px 20px;
   background-color: var(--background-color);
+  
 }
 .hero_button {
   outline: none;
-  padding:10px 15px;
+  padding: 10px 15px;
   border: none;
   background-color: #134a52;
   color: var(--background-colorS);
   border-radius: 5px;
   cursor: pointer;
-
 }
-.hero_button a , .productCard_button a{
-    text-decoration: none;
-    color: var(--background-colorS);
-    font-size: 1.2em;
-    font-weight: bold;
-
+.hero_button a,
+.productCard_button a {
+  text-decoration: none;
+  color: var(--background-colorS);
+  font-size: 1.2em;
+  font-weight: bold;
 }
 .hero_button:hover {
   background-color: var(--primary-color);
   color: var(--background-colorS);
 }
-.products{
-    display: flex;
-gap: 20px;
-    align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
+.products {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 .productCard {
-    background-color: var(--background-color);
-    border-radius: 10px;
-padding-bottom: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
- 
+  background-color: var(--background-color);
+  border-radius: 10px;
+  padding-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 .productCard img {
   width: 300px;
-    height: 300px;
-    border-radius: 10px 10px 0 0;
-} 
-.productCard div {
-    padding: 0 15px;
-  
+  height: 300px;
+  border-radius: 10px 10px 0 0;
 }
-.productCard div .productCard_button{
-    outline: none;
-    padding:10px 15px;
-    border: none;
-    background-color: #134a52;
-    color: var(--background-colorS);
-    border-radius: 5px;
-    cursor: pointer;
+.productCard div {
+  padding: 0 15px;
+}
+.productCard div .productCard_button {
+  outline: none;
+  padding: 10px 15px;
+  border: none;
+  background-color: #134a52;
+  color: var(--background-colorS);
+  border-radius: 5px;
+  cursor: pointer;
+}
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #16171a;
+  color: var(--secondary-color);
+  font-weight: bold;
+  padding: 30px 0;
+  color: var(--secondary-color);
+}
+.footer section {
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+  width: 30%;
+  height: 200px;
+  text-align: left;
+  padding: 0 20px;
+
+}
+.footer section h3 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.footer section p {
+  font-size: 1em;
+  margin-top: 0;
+}
+.footer section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer section ul a {
+  text-decoration: none;
+  color: var(--secondary-color);
+  font-size: 1em;
+}
+.footer section ul.social_media  {
+
+    /* display: inline-block; */
+display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 10px;
+    padding: 0;
+  
+    
+
+}
+
+@media screen and (max-width: 500px) {
+   header .nav_list{
+font-size: .71em;
+padding: 2px;
+
+}
+  .nav_list li a {
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 1px;
+  }
+  .productCard img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .footer {
+    padding: 3px 0;
+    font-size: .71em;
+  }
+  .footer section {
+    padding: 0 2px;
+  
+  }
+  .footer section h3 {
+    font-size: 1em;
+  }
+  
+  .footer section p {
+    font-size:.7em;
+
+    
+    margin-top: 0;
+  }
+
 }
